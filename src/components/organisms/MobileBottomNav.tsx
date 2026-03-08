@@ -10,7 +10,7 @@ import {
 export function MobileBottomNav() {
     return (
         <nav className="fixed bottom-0 left-0 right-0 z-50 lg:hidden">
-            <div className="bg-white border-t border-border/40 px-2 pb-[env(safe-area-inset-bottom)] shadow-[0_-2px_10px_rgba(0,0,0,0.06)]">
+            <div className="bg-card border-t border-border/40 px-2 pb-[env(safe-area-inset-bottom)] shadow-[0_-2px_10px_rgba(0,0,0,0.06)]">
                 <div className="flex items-center justify-around py-1.5">
                     <NavItem icon={LayoutGrid} label="Overview" isActive />
                     <NavItem icon={Wallet} label="Wallet" />

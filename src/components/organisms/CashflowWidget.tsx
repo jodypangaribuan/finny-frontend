@@ -22,7 +22,7 @@ const data = [
 const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
         return (
-            <div className="bg-foreground text-background text-[10px] font-bold py-1 px-2.5 rounded-full shadow-lg flex items-center gap-1.5">
+            <div className="bg-foreground text-card text-[10px] font-bold py-1 px-2.5 rounded-full shadow-lg flex items-center gap-1.5">
                 <span>${payload[0].value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
         );
@@ -32,7 +32,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 
 export function CashflowWidget() {
     return (
-        <Card className="p-4 bg-white h-full flex flex-col">
+        <Card className="p-4 bg-card h-full flex flex-col">
             <WidgetHeader title="Cashflow" actionLabel="This Month" />
 
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 lg:mb-5 gap-2">

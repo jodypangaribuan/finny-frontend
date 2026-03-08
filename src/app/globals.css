@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  /* Light mode tokens */
   --color-background: #F5F7FA;
   --color-foreground: #1e293b;
   --color-primary: #1F64FF;
@@ -15,6 +16,26 @@
   --color-muted-foreground: #94A3B8;
   --color-muted-bg: #F1F5F9;
   --font-sans: var(--font-geist-sans), 'Inter', Arial, sans-serif;
+}
+
+/* Dark mode overrides applied when HTML has .dark class */
+.dark {
+  --color-background: #070B14;
+  /* Deep, dark background */
+  --color-foreground: #F8FAFC;
+  --color-primary: #3B82F6;
+  --color-primary-hover: #60A5FA;
+  --color-card: #111827;
+  /* Slightly lighter than background for cards/sidebar */
+  --color-success: #10B981;
+  --color-success-bg: rgba(16, 185, 129, 0.15);
+  --color-danger: #EF4444;
+  --color-danger-bg: rgba(239, 68, 68, 0.15);
+  --color-border: #1F2937;
+  --color-muted: #94A3B8;
+  --color-muted-foreground: #64748B;
+  --color-muted-bg: #1F2937;
+  /* Even lighter for hovers/input backgrounds */
 }
 
 body {
@@ -34,6 +55,10 @@ body {
 .sidebar-scrollbar::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+}
+
+.dark .sidebar-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Hide scrollbar utility */

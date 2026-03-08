@@ -18,8 +18,8 @@ export function MenuItem({ icon, label, isActive, notificationCount, onClick }: 
             className={cn(
                 "flex w-full items-center justify-between rounded-lg px-3 py-2 text-[13px] font-medium transition-colors cursor-pointer",
                 {
-                    "bg-white text-foreground shadow-[0_1px_3px_rgba(0,0,0,0.06)]": isActive,
-                    "text-muted-foreground hover:bg-white/60 hover:text-foreground": !isActive,
+                    "bg-primary/5 dark:bg-muted-bg text-foreground shadow-[0_1px_3px_rgba(0,0,0,0.06)]": isActive,
+                    "text-muted-foreground hover:bg-muted-bg/50 hover:text-foreground": !isActive,
                 }
             )}
         >

@@ -13,7 +13,7 @@ export function RecentActivityWidget() {
     ];
 
     return (
-        <Card className="p-4 bg-white flex flex-col h-full">
+        <Card className="p-4 bg-card flex flex-col h-full">
             <WidgetHeader title="Recently Activity" actionLabel="This Week" />
 
             <div className="flex text-[10px] font-semibold text-muted-foreground mb-1 mt-1 px-0.5 border-b border-border/30 pb-2">

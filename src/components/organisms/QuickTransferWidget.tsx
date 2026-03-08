@@ -16,7 +16,7 @@ export function QuickTransferWidget() {
     ];
 
     return (
-        <Card className="p-4 bg-white">
+        <Card className="p-4 bg-card">
             <WidgetHeader title="Quick transfer" actionLabel="This Week" />
 
             <div className="flex items-center gap-3 overflow-x-auto pb-1 pt-4 hide-scrollbar">
@@ -30,7 +30,7 @@ export function QuickTransferWidget() {
                             {users[0].name}
                             <div className="absolute -bottom-[4px] left-1/2 -translate-x-1/2 border-[4px] border-transparent border-t-primary"></div>
                         </div>
-                        <Avatar src={users[0].src} size="lg" className="ring-2 ring-primary ring-offset-2 shrink-0 border-0 shadow-sm" />
+                        <Avatar src={users[0].src} size="lg" className="ring-2 ring-primary ring-offset-2 ring-offset-card shrink-0 border-0 shadow-sm" />
                     </div>
 
                     {users.slice(1).map(user => (

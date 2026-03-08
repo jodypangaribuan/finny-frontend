@@ -11,7 +11,8 @@ interface HeaderProps {
 
 export function Header({ onMenuToggle }: HeaderProps) {
     return (
-        <header className="sticky top-0 z-30 flex h-14 lg:h-16 w-full items-center justify-between bg-white border-b border-border/40 px-4 lg:px-6">
+        <header className="sticky top-0 z-30 flex h-14 lg:h-16 w-full items-center justify-between bg-card border-b border-border/40 px-4 lg:px-6">
+
             <div className="flex items-center gap-3">
                 {/* Mobile hamburger */}
                 <button
@@ -24,7 +25,7 @@ export function Header({ onMenuToggle }: HeaderProps) {
                 {/* Mobile brand */}
                 <div className="flex items-center gap-2 lg:hidden">
                     <div className="flex h-6 w-6 items-center justify-center rounded-md bg-primary text-white">
-                        <div className="w-3 h-3 border-[1.5px] border-white rounded-[2px] relative bg-white">
+                        <div className="w-3 h-3 border-[1.5px] border-white dark:border-card rounded-[2px] relative bg-white dark:bg-card">
                             <div className="w-1 h-1 absolute top-[-4px] right-[-4px] bg-primary"></div>
                         </div>
                     </div>
@@ -43,11 +44,11 @@ export function Header({ onMenuToggle }: HeaderProps) {
                 <button className="flex h-8 w-8 lg:h-9 lg:w-9 items-center justify-center rounded-full hover:bg-muted-bg transition-colors relative">
                     <IconWrapper icon={Bell} size={16} className="text-foreground lg:hidden" />
                     <IconWrapper icon={Bell} size={18} className="text-foreground hidden lg:block" />
-                    <span className="absolute top-1 lg:top-1.5 right-1.5 lg:right-2 h-2 w-2 rounded-full bg-danger border-2 border-white"></span>
+                    <span className="absolute top-1 lg:top-1.5 right-1.5 lg:right-2 h-2 w-2 rounded-full bg-danger border-2 border-white dark:border-card"></span>
                 </button>
 
                 {/* Desktop profile */}
-                <div className="hidden lg:flex ml-1 items-center gap-2.5 cursor-pointer rounded-xl transition-colors bg-white py-1.5 px-2">
+                <div className="hidden lg:flex ml-1 items-center gap-2.5 cursor-pointer rounded-xl transition-colors bg-card hover:bg-muted-bg py-1.5 px-2">
                     <Avatar
                         src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
                         alt="Jerry Warren"

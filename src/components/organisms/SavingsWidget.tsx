@@ -6,7 +6,7 @@ import { Badge } from '../atoms/Badge';
 
 export function SavingsWidget() {
     return (
-        <Card className="p-4 bg-white h-full flex flex-col justify-between">
+        <Card className="p-4 bg-card h-full flex flex-col justify-between">
             <div>
                 <WidgetHeader title="Savings" actionLabel="This Week" />
 

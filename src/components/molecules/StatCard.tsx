@@ -16,14 +16,14 @@ export function StatCard({ title, amount, trend, comparisonText, hasDropdown }: 
     const isPositive = trend >= 0;
 
     return (
-        <Card className="p-3 lg:p-4 xl:p-5 w-full flex flex-col justify-between h-full bg-white">
+        <Card className="p-3 lg:p-4 xl:p-5 w-full flex flex-col justify-between h-full bg-card">
             <div className="flex items-center justify-between mb-2 lg:mb-3">
                 <div className="flex items-center gap-1 lg:gap-1.5 text-muted-foreground text-[10px] lg:text-xs font-medium">
                     {title}
                     <IconWrapper icon={Info} size={10} className="text-muted-foreground/50 hidden sm:block" />
                 </div>
                 {hasDropdown && (
-                    <button className="hidden sm:flex items-center gap-1 text-[9px] lg:text-[10px] font-medium text-muted-foreground hover:text-foreground transition-colors border border-border/50 rounded-full px-2 lg:px-2.5 py-0.5 bg-white">
+                    <button className="hidden sm:flex items-center gap-1 text-[9px] lg:text-[10px] font-medium text-muted-foreground hover:text-foreground transition-colors border border-border/50 rounded-full px-2 lg:px-2.5 py-0.5 bg-card">
                         <IconWrapper icon={ChevronDown} size={9} /> July 16 <IconWrapper icon={ChevronDown} size={9} />
                     </button>
                 )}

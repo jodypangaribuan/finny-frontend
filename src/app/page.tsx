@@ -19,11 +19,11 @@ export default function Home() {
         </h2>
 
         <div className="flex items-center gap-2 w-full sm:w-auto">
-          <button className="flex items-center gap-1.5 bg-white border border-border/60 text-foreground text-[11px] lg:text-xs font-semibold rounded-lg h-8 lg:h-9 px-2.5 lg:px-3 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:bg-muted-bg transition-colors">
+          <button className="flex items-center gap-1.5 bg-card border border-border/60 text-foreground text-[11px] lg:text-xs font-semibold rounded-lg h-8 lg:h-9 px-2.5 lg:px-3 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:bg-muted-bg transition-colors">
             <IconWrapper icon={Calendar} size={13} className="text-muted-foreground" />
             16 May 2024
           </button>
-          <Button variant="primary" className="rounded-lg h-8 lg:h-9 px-3 lg:px-4 text-[11px] lg:text-xs font-semibold shadow-md shadow-primary/25 flex-1 sm:flex-none bg-primary">
+          <Button variant="primary" className="rounded-lg h-8 lg:h-9 px-3 lg:px-4 text-[11px] lg:text-xs font-semibold shadow-md shadow-primary/25 flex-1 sm:flex-none bg-primary text-white">
             <IconWrapper icon={DownloadCloud} size={13} className="mr-0.5" />
             Export
           </Button>

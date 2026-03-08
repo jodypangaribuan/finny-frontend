@@ -7,13 +7,13 @@ import { Info, ChevronDown, Copy, ArrowUpRight, ArrowDownLeft, Plus } from 'luci
 
 export function BalanceWidget() {
     return (
-        <Card className="p-4 lg:p-5 relative bg-white flex flex-col justify-between h-full">
+        <Card className="p-4 lg:p-5 relative bg-card flex flex-col justify-between h-full">
             <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-1.5 text-muted-foreground text-[11px] lg:text-xs font-medium">
                     My Balance
                     <IconWrapper icon={Info} size={11} className="text-muted-foreground/50" />
                 </div>
-                <button className="flex items-center gap-1 text-[9px] lg:text-[10px] font-medium text-muted-foreground hover:text-foreground transition-colors border border-border/50 rounded-full px-2 lg:px-2.5 py-0.5 bg-white">
+                <button className="flex items-center gap-1 text-[9px] lg:text-[10px] font-medium text-muted-foreground hover:text-foreground transition-colors border border-border/50 rounded-full px-2 lg:px-2.5 py-0.5 bg-card">
                     <IconWrapper icon={ChevronDown} size={9} /> July 16 <IconWrapper icon={ChevronDown} size={9} />
                 </button>
             </div>
@@ -31,13 +31,13 @@ export function BalanceWidget() {
             </div>
 
             <div className="flex items-center gap-2 w-full mt-auto">
-                <Button variant="primary" className="flex-1 rounded-lg h-9 lg:h-10 text-[11px] lg:text-xs font-semibold shadow-md shadow-primary/20 bg-primary gap-1">
+                <Button variant="primary" className="flex-1 rounded-lg h-9 lg:h-10 text-[11px] lg:text-xs font-semibold shadow-md shadow-primary/20 bg-primary text-white gap-1">
                     <IconWrapper icon={ArrowUpRight} size={13} /> Transfer
                 </Button>
-                <Button variant="outline" className="flex-1 rounded-lg h-9 lg:h-10 text-[11px] lg:text-xs font-semibold border-border/60 bg-white text-foreground hover:bg-muted-bg gap-1">
+                <Button variant="outline" className="flex-1 rounded-lg h-9 lg:h-10 text-[11px] lg:text-xs font-semibold border-border/60 bg-card text-foreground hover:bg-muted-bg gap-1">
                     <IconWrapper icon={ArrowDownLeft} size={13} /> Received
                 </Button>
-                <Button variant="outline" size="icon" className="shrink-0 h-9 w-9 lg:h-10 lg:w-10 rounded-lg border-border/60 bg-white text-foreground hover:bg-muted-bg">
+                <Button variant="outline" size="icon" className="shrink-0 h-9 w-9 lg:h-10 lg:w-10 rounded-lg border-border/60 bg-card text-foreground hover:bg-muted-bg">
                     <Plus size={14} strokeWidth={2.5} />
                 </Button>
             </div>
