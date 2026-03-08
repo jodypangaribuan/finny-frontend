@@ -7,8 +7,10 @@ services:
       dockerfile: Dockerfile
     container_name: finny-frontend
     ports:
-      - "3000:3000"
+      - "3000" # Maps container port 3000 to a random available host port on the server # Maps container port 3000 to a random available host port
     restart: unless-stopped
+    # networks:
+    #   - web_proxy # Uncomment and define if using a shared proxy network
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
