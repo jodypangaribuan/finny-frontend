@@ -8,8 +8,9 @@ import {
     LayoutGrid, Wallet, ArrowLeftRight, Landmark,
     TrendingUp, BarChart2, DollarSign, FileText,
     MessageSquare, Settings, AlertCircle, HelpCircle,
-    Moon, X
+    Moon, Sun, X
 } from 'lucide-react';
+import { ThemeToggle } from '../molecules/ThemeToggle';
 
 interface SidebarProps {
     isOpen?: boolean;
@@ -80,18 +81,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 </div>
 
                 <div className="mt-2 flex items-center justify-between px-5 pt-3 border-t border-border/30">
-                    <div className="flex items-center gap-2.5 text-xs font-medium text-muted-foreground">
-                        <IconWrapper icon={Moon} size={16} />
-                        <span>Dark Mode</span>
+                    <div className="flex items-center gap-2.5 text-xs font-medium text-muted-foreground transition-colors duration-300">
+                        <IconWrapper icon={isDark ? Moon : Sun} size={16} className="transition-all duration-300" />
+                        <span>{isDark ? 'Dark Mode' : 'Light Mode'}</span>
                     </div>
-                    <div
-                        className="h-5 w-9 rounded-full bg-muted-bg border border-border/60 p-[2px] relative flex items-center cursor-pointer overflow-hidden"
-                        onClick={() => setTheme(isDark ? 'light' : 'dark')}
-                    >
-                        <div
-                            className={`h-4 w-4 rounded-full bg-white dark:bg-muted-foreground shadow-sm absolute transition-all duration-300 ease-in-out ${isDark ? 'translate-x-[16px]' : 'translate-x-0'}`}
-                        />
-                    </div>
+                    <ThemeToggle />
                 </div>
             </aside>
         </>

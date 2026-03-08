@@ -4,6 +4,7 @@ import React from 'react';
 import { IconWrapper } from '../atoms/IconWrapper';
 import { Avatar } from '../atoms/Avatar';
 import { Search, Bell, ChevronDown, Menu } from 'lucide-react';
+import { ThemeToggle } from '../molecules/ThemeToggle';
 
 interface HeaderProps {
     onMenuToggle?: () => void;
@@ -41,6 +42,9 @@ export function Header({ onMenuToggle }: HeaderProps) {
                     <IconWrapper icon={Search} size={16} className="text-foreground lg:hidden" />
                     <IconWrapper icon={Search} size={18} className="text-foreground hidden lg:block" />
                 </button>
+                <div className="flex items-center lg:hidden mr-1">
+                    <ThemeToggle />
+                </div>
                 <button className="flex h-8 w-8 lg:h-9 lg:w-9 items-center justify-center rounded-full hover:bg-muted-bg transition-colors relative">
                     <IconWrapper icon={Bell} size={16} className="text-foreground lg:hidden" />
                     <IconWrapper icon={Bell} size={18} className="text-foreground hidden lg:block" />
