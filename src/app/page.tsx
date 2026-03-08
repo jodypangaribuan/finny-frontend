@@ -30,10 +30,12 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Mobile: Balance card first, full width */}
-      <div className="lg:hidden flex flex-col gap-3 mb-3">
-        <BalanceWidget />
-        <div className="grid grid-cols-2 gap-3">
+      {/* Mobile & Tablet: Balance & Stats */}
+      <div className="lg:hidden grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 mb-3 md:mb-4">
+        <div className="md:col-span-5">
+          <BalanceWidget />
+        </div>
+        <div className="grid grid-cols-2 gap-3 md:gap-4 md:col-span-7">
           <StatCard
             title="Monthly Spent"
             amount="$45,623.48"
@@ -74,21 +76,25 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Mobile: stacked widgets */}
-      <div className="lg:hidden flex flex-col gap-3">
-        <CashflowWidget />
+      {/* Mobile & Tablet: stacked widgets */}
+      <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+        <div className="md:col-span-2">
+          <CashflowWidget />
+        </div>
         <QuickTransferWidget />
         <SavingsWidget />
-        <RecentActivityWidget />
+        <div className="md:col-span-2">
+          <RecentActivityWidget />
+        </div>
       </div>
 
       {/* Desktop: 2-column layout */}
       <div className="hidden lg:grid lg:grid-cols-12 gap-4">
-        <div className="xl:col-span-5 flex flex-col gap-4">
+        <div className="lg:col-span-5 flex flex-col gap-4">
           <QuickTransferWidget />
           <RecentActivityWidget />
         </div>
-        <div className="xl:col-span-7 flex flex-col gap-4">
+        <div className="lg:col-span-7 flex flex-col gap-4">
           <CashflowWidget />
           <SavingsWidget />
         </div>
