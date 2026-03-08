@@ -16,26 +16,26 @@ export function QuickTransferWidget() {
     ];
 
     return (
-        <Card className="p-6 bg-white">
+        <Card className="p-4 bg-white">
             <WidgetHeader title="Quick transfer" actionLabel="This Week" />
 
-            <div className="flex items-center gap-4 overflow-x-auto pb-2 pt-6 hide-scrollbar">
-                <Button variant="outline" size="icon" className="h-[52px] w-[52px] rounded-full shrink-0 border-dashed border-2 text-muted-foreground border-border/80 bg-muted-bg/30 hover:bg-muted-bg">
-                    <Plus size={24} className="text-foreground" />
+            <div className="flex items-center gap-3 overflow-x-auto pb-1 pt-4 hide-scrollbar">
+                <Button variant="outline" size="icon" className="h-11 w-11 rounded-full shrink-0 border-dashed border-[1.5px] text-muted-foreground border-border/60 bg-muted-bg/20 hover:bg-muted-bg">
+                    <Plus size={18} className="text-foreground" />
                 </Button>
 
-                <div className="flex items-center gap-[14px]">
-                    <div className="flex flex-col items-center gap-2 relative group cursor-pointer">
-                        <div className="absolute -top-9 left-1/2 -translate-x-1/2 bg-primary text-white text-[11px] px-3 py-1 rounded-full font-bold whitespace-nowrap shadow-md transition-opacity">
+                <div className="flex items-center gap-2.5">
+                    <div className="flex flex-col items-center gap-1.5 relative group cursor-pointer">
+                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold whitespace-nowrap shadow-md transition-opacity">
                             {users[0].name}
-                            <div className="absolute -bottom-[5px] left-1/2 -translate-x-1/2 border-[5px] border-transparent border-t-primary"></div>
+                            <div className="absolute -bottom-[4px] left-1/2 -translate-x-1/2 border-[4px] border-transparent border-t-primary"></div>
                         </div>
-                        <Avatar src={users[0].src} size="xl" className="ring-2 ring-primary ring-offset-2 shrink-0 border-0 shadow-sm" />
+                        <Avatar src={users[0].src} size="lg" className="ring-2 ring-primary ring-offset-2 shrink-0 border-0 shadow-sm" />
                     </div>
 
                     {users.slice(1).map(user => (
                         <div key={user.id} className="cursor-pointer group">
-                            <Avatar src={user.src} size="xl" className="shrink-0 border-0 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-105" />
+                            <Avatar src={user.src} size="lg" className="shrink-0 border-0 opacity-80 group-hover:opacity-100 transition-all group-hover:scale-105" />
                         </div>
                     ))}
                 </div>

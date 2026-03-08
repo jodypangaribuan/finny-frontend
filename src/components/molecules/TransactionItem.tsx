@@ -25,26 +25,26 @@ export function TransactionItem({
     const isPositive = amount > 0;
 
     return (
-        <div className="flex items-center py-3.5 gap-2">
+        <div className="flex items-center py-2.5 gap-1.5">
             {/* Name column */}
-            <div className="flex items-center gap-3 w-5/12">
-                <div className={cn("flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white font-bold text-sm overflow-hidden", iconBgColor || "bg-primary")}>
+            <div className="flex items-center gap-2.5 w-5/12">
+                <div className={cn("flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white font-bold text-[11px] overflow-hidden", iconBgColor || "bg-primary")}>
                     {iconText || name.charAt(0)}
                 </div>
                 <div className="min-w-0">
-                    <p className="text-sm font-semibold text-foreground truncate">{name}</p>
-                    <p className="text-xs text-muted-foreground">{cardNumber}</p>
+                    <p className="text-[13px] font-semibold text-foreground truncate">{name}</p>
+                    <p className="text-[10px] text-muted-foreground">{cardNumber}</p>
                 </div>
             </div>
 
             {/* Date column */}
-            <div className="w-4/12 text-sm text-muted-foreground">
+            <div className="w-4/12 text-[12px] text-muted-foreground">
                 {date}
             </div>
 
             {/* Amount column */}
             <div className={cn(
-                "w-3/12 text-sm font-semibold text-right",
+                "w-3/12 text-[12px] font-semibold text-right",
                 isPositive ? "text-primary" : "text-danger"
             )}>
                 {isPositive ? '+' : ''}{amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}

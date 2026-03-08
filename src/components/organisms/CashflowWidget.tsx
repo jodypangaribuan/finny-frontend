@@ -22,7 +22,7 @@ const data = [
 const CustomTooltip = ({ active, payload, label }: any) => {
     if (active && payload && payload.length) {
         return (
-            <div className="bg-foreground text-background text-xs font-bold py-1 px-3 rounded-full shadow-lg flex items-center gap-2">
+            <div className="bg-foreground text-background text-[10px] font-bold py-1 px-2.5 rounded-full shadow-lg flex items-center gap-1.5">
                 <span>${payload[0].value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
         );
@@ -32,64 +32,64 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 
 export function CashflowWidget() {
     return (
-        <Card className="p-6 bg-white h-full flex flex-col">
+        <Card className="p-4 bg-white h-full flex flex-col">
             <WidgetHeader title="Cashflow" actionLabel="This Month" />
 
-            <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center justify-between mb-5">
                 <div>
-                    <div className="text-sm text-muted-foreground font-medium mb-1">Total Balance</div>
-                    <div className="flex items-end gap-3">
-                        <h2 className="text-3xl font-bold tracking-tight text-foreground">$83,074.00</h2>
-                        <Badge variant="success" className="mb-[3px] py-0.5 px-2 text-[10px] font-bold">+16.8%</Badge>
+                    <div className="text-[11px] text-muted-foreground font-medium mb-0.5">Total Balance</div>
+                    <div className="flex items-end gap-2">
+                        <h2 className="text-2xl font-bold tracking-tight text-foreground">$83,074.00</h2>
+                        <Badge variant="success" className="mb-[2px] py-0 px-1.5 text-[9px] font-bold">↑ 16.8%</Badge>
                     </div>
                 </div>
-                <div className="flex items-center gap-5">
-                    <div className="flex items-center gap-2">
-                        <div className="w-2.5 h-2.5 rounded-full bg-primary shadow-sm"></div>
-                        <span className="text-xs font-semibold text-muted-foreground">Expense</span>
+                <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-1.5">
+                        <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        <span className="text-[10px] font-semibold text-muted-foreground">Expense</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-400 shadow-sm"></div>
-                        <span className="text-xs font-semibold text-muted-foreground">Income</span>
+                    <div className="flex items-center gap-1.5">
+                        <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
+                        <span className="text-[10px] font-semibold text-muted-foreground">Income</span>
                     </div>
                 </div>
             </div>
 
-            <div className="flex-1 w-full min-h-[220px]">
+            <div className="flex-1 w-full min-h-[180px]">
                 <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={data} margin={{ top: 20, right: 10, left: -25, bottom: 0 }}>
+                    <LineChart data={data} margin={{ top: 10, right: 10, left: -30, bottom: 0 }}>
                         <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
                         <XAxis
                             dataKey="name"
                             axisLine={false}
                             tickLine={false}
-                            tick={{ fill: '#94A3B8', fontSize: 11, fontWeight: 500 }}
-                            dy={15}
+                            tick={{ fill: '#94A3B8', fontSize: 10, fontWeight: 500 }}
+                            dy={10}
                         />
                         <YAxis
                             axisLine={false}
                             tickLine={false}
-                            tick={{ fill: '#94A3B8', fontSize: 11, fontWeight: 500 }}
+                            tick={{ fill: '#94A3B8', fontSize: 10, fontWeight: 500 }}
                             tickFormatter={(value) => `${value >= 1000 ? value / 1000 + 'K' : value}`}
                             allowDecimals={false}
-                            tickCount={6}
+                            tickCount={5}
                         />
                         <Tooltip content={<CustomTooltip />} cursor={{ stroke: '#E2E8F0', strokeWidth: 1, strokeDasharray: '3 3' }} />
                         <Line
                             type="monotone"
                             dataKey="expense"
                             stroke="#1F64FF"
-                            strokeWidth={3.5}
+                            strokeWidth={2.5}
                             dot={{ r: 0 }}
-                            activeDot={{ r: 6, fill: '#0a0a0a', stroke: '#1F64FF', strokeWidth: 3 }}
+                            activeDot={{ r: 5, fill: '#0a0a0a', stroke: '#1F64FF', strokeWidth: 2.5 }}
                         />
                         <Line
                             type="monotone"
                             dataKey="income"
                             stroke="#FACC15"
-                            strokeWidth={3.5}
+                            strokeWidth={2.5}
                             dot={{ r: 0 }}
-                            activeDot={{ r: 6, fill: '#0a0a0a', stroke: '#FACC15', strokeWidth: 3 }}
+                            activeDot={{ r: 5, fill: '#0a0a0a', stroke: '#FACC15', strokeWidth: 2.5 }}
                         />
                     </LineChart>
                 </ResponsiveContainer>

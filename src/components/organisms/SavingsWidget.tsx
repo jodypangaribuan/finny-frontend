@@ -6,17 +6,17 @@ import { Badge } from '../atoms/Badge';
 
 export function SavingsWidget() {
     return (
-        <Card className="p-6 bg-white h-full flex flex-col justify-between">
+        <Card className="p-4 bg-white h-full flex flex-col justify-between">
             <div>
                 <WidgetHeader title="Savings" actionLabel="This Week" />
 
-                <div className="flex items-end gap-3 mb-8">
-                    <h2 className="text-3xl lg:text-4xl font-bold tracking-tight text-foreground">$93,845.00</h2>
-                    <Badge variant="success" className="mb-2 py-0.5 px-2 text-[10px] font-bold">+16.8%</Badge>
+                <div className="flex items-end gap-2 mb-5">
+                    <h2 className="text-2xl font-bold tracking-tight text-foreground">$93,845.00</h2>
+                    <Badge variant="success" className="mb-1 py-0 px-1.5 text-[9px] font-bold">↑ 16.8%</Badge>
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mt-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mt-auto">
                 <SavingsGoal
                     title="Dream House"
                     target={75849.00}

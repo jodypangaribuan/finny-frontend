@@ -13,22 +13,22 @@ export function RecentActivityWidget() {
     ];
 
     return (
-        <Card className="p-6 bg-white flex flex-col h-full">
+        <Card className="p-4 bg-white flex flex-col h-full">
             <WidgetHeader title="Recently Activity" actionLabel="This Week" />
 
-            <div className="flex text-[11px] font-semibold text-muted-foreground mb-1 mt-2 px-1 border-b border-border/40 pb-3">
-                <div className="w-5/12 flex items-center gap-1">
-                    Name <ChevronDown size={10} />
+            <div className="flex text-[10px] font-semibold text-muted-foreground mb-1 mt-1 px-0.5 border-b border-border/30 pb-2">
+                <div className="w-5/12 flex items-center gap-0.5">
+                    Name <ChevronDown size={8} />
                 </div>
-                <div className="w-4/12 flex items-center gap-1">
-                    Date <ChevronDown size={10} />
+                <div className="w-4/12 flex items-center gap-0.5">
+                    Date <ChevronDown size={8} />
                 </div>
                 <div className="w-3/12 text-right">Amount</div>
             </div>
 
-            <div className="flex flex-col flex-1 pb-1">
+            <div className="flex flex-col flex-1">
                 {transactions.map((t, i) => (
-                    <div key={i} className="border-b border-border/40 last:border-0">
+                    <div key={i} className="border-b border-border/30 last:border-0">
                         <TransactionItem
                             name={t.name}
                             cardNumber={t.cardNumber}

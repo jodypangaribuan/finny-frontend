@@ -11,12 +11,12 @@ interface WidgetHeaderProps {
 
 export function WidgetHeader({ title, actionLabel, onAction }: WidgetHeaderProps) {
     return (
-        <div className="flex items-center justify-between mb-4">
-            <h3 className="font-bold text-lg">{title}</h3>
+        <div className="flex items-center justify-between mb-3">
+            <h3 className="font-bold text-[14px]">{title}</h3>
             {actionLabel && (
-                <Button variant="outline" size="sm" onClick={onAction} className="rounded-full text-xs h-8 text-muted-foreground border-border/60 font-medium">
+                <Button variant="outline" size="sm" onClick={onAction} className="rounded-full text-[10px] h-7 px-3 text-muted-foreground border-border/50 font-medium">
                     {actionLabel}
-                    <IconWrapper icon={ChevronDown} size={14} className="ml-1" />
+                    <IconWrapper icon={ChevronDown} size={12} className="ml-0.5" />
                 </Button>
             )}
         </div>
