@@ -12,6 +12,7 @@ services:
     environment:
       - NODE_ENV=${NODE_ENV}
       - NEXT_TELEMETRY_DISABLED=${NEXT_TELEMETRY_DISABLED}
+      - HOSTNAME=0.0.0.0 # Critical: ensures Next.js listens on all network interfaces inside Docker
 
   tunnel:
     image: cloudflare/cloudflared:latest
