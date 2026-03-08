@@ -16,19 +16,19 @@ export function MenuItem({ icon, label, isActive, notificationCount, onClick }: 
         <button
             onClick={onClick}
             className={cn(
-                "flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-medium transition-colors cursor-pointer",
+                "flex w-full items-center justify-between rounded-lg px-3 py-2 text-[13px] font-medium transition-colors cursor-pointer",
                 {
-                    "bg-white text-foreground shadow-sm shadow-blue-500/5": isActive,
-                    "text-muted-foreground hover:bg-white/50 hover:text-foreground": !isActive,
+                    "bg-white text-foreground shadow-[0_1px_3px_rgba(0,0,0,0.06)]": isActive,
+                    "text-muted-foreground hover:bg-white/60 hover:text-foreground": !isActive,
                 }
             )}
         >
-            <div className="flex items-center gap-3">
-                <IconWrapper icon={icon} size={20} className={isActive ? "text-primary" : "text-muted-foreground"} />
+            <div className="flex items-center gap-2.5">
+                <IconWrapper icon={icon} size={18} className={isActive ? "text-primary" : "text-muted-foreground"} />
                 <span className={cn(isActive && "font-semibold")}>{label}</span>
             </div>
             {notificationCount ? (
-                <div className="flex h-5 w-5 items-center justify-center rounded-full bg-danger text-[10px] font-bold text-white">
+                <div className="flex h-4.5 w-4.5 items-center justify-center rounded-full bg-danger text-[9px] font-bold text-white min-w-[18px] min-h-[18px]">
                     {notificationCount}
                 </div>
             ) : null}
