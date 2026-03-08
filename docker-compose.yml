@@ -7,10 +7,14 @@ services:
       dockerfile: Dockerfile
     container_name: finny-frontend
     ports:
-      - "3000" # Maps container port 3000 to a random available host port on the server # Maps container port 3000 to a random available host port
+      - "3000:3000" # Fixed to 3000 for easier Cloudflare configuration
     restart: unless-stopped
-    # networks:
-    #   - web_proxy # Uncomment and define if using a shared proxy network
     environment:
-      - NODE_ENV=production
-      - NEXT_TELEMETRY_DISABLED=1
+      - NODE_ENV=${NODE_ENV}
+      - NEXT_TELEMETRY_DISABLED=${NEXT_TELEMETRY_DISABLED}
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
