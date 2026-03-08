@@ -7,15 +7,9 @@ services:
       dockerfile: Dockerfile
     container_name: finny-frontend
     ports:
-      - "3000:3000" # Fixed to 3000 for easier Cloudflare configuration
+      - "3000:3000"
     restart: unless-stopped
     environment:
       - NODE_ENV=${NODE_ENV}
       - NEXT_TELEMETRY_DISABLED=${NEXT_TELEMETRY_DISABLED}
-      - HOSTNAME=0.0.0.0 # Critical: ensures Next.js listens on all network interfaces inside Docker
-
-  tunnel:
-    image: cloudflare/cloudflared:latest
-    container_name: cloudflared-tunnel
-    restart: unless-stopped
-    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+      - HOSTNAME=0.0.0.0
