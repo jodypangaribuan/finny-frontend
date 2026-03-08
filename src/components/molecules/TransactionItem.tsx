@@ -1,5 +1,4 @@
 import React from 'react';
-import { Avatar } from '../atoms/Avatar';
 import { cn } from '@/lib/utils';
 
 interface TransactionItemProps {
@@ -10,6 +9,7 @@ interface TransactionItemProps {
     avatarSrc?: string;
     avatarFallback?: string;
     iconBgColor?: string;
+    iconText?: string;
 }
 
 export function TransactionItem({
@@ -19,28 +19,32 @@ export function TransactionItem({
     cardNumber,
     avatarSrc,
     avatarFallback,
-    iconBgColor
+    iconBgColor,
+    iconText
 }: TransactionItemProps) {
     const isPositive = amount > 0;
 
     return (
-        <div className="flex items-center justify-between py-3">
-            <div className="flex items-center gap-3">
-                <div className={cn("flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white font-bold overflow-hidden", iconBgColor || "bg-primary")}>
-                    {avatarSrc ? <Avatar src={avatarSrc} alt={name} size="md" className="border-0" /> : avatarFallback || name.charAt(0)}
+        <div className="flex items-center py-3.5 gap-2">
+            {/* Name column */}
+            <div className="flex items-center gap-3 w-5/12">
+                <div className={cn("flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white font-bold text-sm overflow-hidden", iconBgColor || "bg-primary")}>
+                    {iconText || name.charAt(0)}
                 </div>
-                <div>
-                    <p className="text-sm font-semibold text-foreground">{name}</p>
+                <div className="min-w-0">
+                    <p className="text-sm font-semibold text-foreground truncate">{name}</p>
                     <p className="text-xs text-muted-foreground">{cardNumber}</p>
                 </div>
             </div>
 
-            <div className="text-sm font-medium text-muted-foreground">
+            {/* Date column */}
+            <div className="w-4/12 text-sm text-muted-foreground">
                 {date}
             </div>
 
+            {/* Amount column */}
             <div className={cn(
-                "text-sm font-semibold text-right",
+                "w-3/12 text-sm font-semibold text-right",
                 isPositive ? "text-primary" : "text-danger"
             )}>
                 {isPositive ? '+' : ''}{amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
