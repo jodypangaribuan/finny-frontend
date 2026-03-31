@@ -3,6 +3,7 @@ import { WidgetHeader } from '../molecules/WidgetHeader';
 import { Button } from '../atoms/Button';
 import { Plus } from 'lucide-react';
 import { Avatar } from '../atoms/Avatar';
+import { quickTransferUsers as users } from '../../data/mock';
 
 /**
  * Renders a quick transfer widget with a horizontal list of user avatars and a create/add button.
@@ -12,15 +13,6 @@ import { Avatar } from '../atoms/Avatar';
  * @returns {JSX.Element} The rendered quick transfer widget component.
  **/
 export function QuickTransferWidget() {
-    const users = [
-        { src: 'https://i.pravatar.cc/150?u=1', fallback: 'RF', id: '1', name: 'Robert Fox' },
-        { src: 'https://i.pravatar.cc/150?u=2', fallback: 'AS', id: '2' },
-        { src: 'https://i.pravatar.cc/150?u=3', fallback: 'MJ', id: '3' },
-        { src: 'https://i.pravatar.cc/150?u=4', fallback: 'KL', id: '4' },
-        { src: 'https://i.pravatar.cc/150?u=5', fallback: 'EW', id: '5' },
-        { src: 'https://i.pravatar.cc/150?u=6', fallback: 'RJ', id: '6' },
-    ];
-
     return (
         <Card className="p-4 bg-card">
             <WidgetHeader title="Quick transfer" actionLabel="This Week" />

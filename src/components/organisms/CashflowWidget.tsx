@@ -8,18 +8,7 @@ import { WidgetHeader } from '../molecules/WidgetHeader';
 import { Badge } from '../atoms/Badge';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, TooltipProps } from 'recharts';
 
-const data = [
-    { name: 'Dec', income: 4500, expense: 12000 },
-    { name: 'Jan', income: 7500, expense: 12500 },
-    { name: 'Feb', income: 4500, expense: 9000 },
-    { name: 'Mar', income: 9000, expense: 13000 },
-    { name: 'Apr', income: 6000, expense: 11000 },
-    { name: 'May', income: 8448.05, expense: 16848.05 },
-    { name: 'Jun', income: 5000, expense: 13500 },
-    { name: 'Jul', income: 4500, expense: 10500 },
-    { name: 'Aug', income: 8000, expense: 14000 },
-    { name: 'Sep', income: 5000, expense: 11000 },
-];
+import { cashflowData as data } from '../../data/mock';
 
 const CustomTooltip = ({ active, payload }: TooltipProps<number, string> & { payload?: { value: number }[] }) => {
     if (active && payload && payload.length) {
