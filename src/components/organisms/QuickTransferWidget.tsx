@@ -20,7 +20,7 @@ export function QuickTransferWidget() {
             <WidgetHeader title="Quick transfer" actionLabel="This Week" />
 
             <div className="flex items-center gap-3 overflow-x-auto pb-1 pt-4 hide-scrollbar">
-                <Button variant="outline" size="icon" className="h-11 w-11 rounded-full shrink-0 border-dashed border-[1.5px] text-muted-foreground border-border/60 bg-muted-bg/20 hover:bg-muted-bg">
+                <Button variant="outline" size="icon" className="size-11 rounded-full shrink-0 border-dashed border-[1.5px] text-muted-foreground border-border/60 bg-muted-bg/20 hover:bg-muted-bg">
                     <Plus size={18} className="text-foreground" />
                 </Button>
 

@@ -45,15 +45,15 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             `}>
                 <div className="flex items-center justify-between px-5 mb-6">
                     <div className="flex items-center gap-2.5">
-                        <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary text-white">
-                            <div className="w-3.5 h-3.5 border-[1.5px] border-white dark:border-card rounded-[3px] relative bg-white dark:bg-card">
-                                <div className="w-1.5 h-1.5 absolute top-[-5px] right-[-5px] bg-primary"></div>
+                        <div className="flex size-7 items-center justify-center rounded-lg bg-primary text-white">
+                            <div className="size-3.5 border-[1.5px] border-white dark:border-card rounded-[3px] relative bg-white dark:bg-card">
+                                <div className="size-1.5 absolute top-[-5px] right-[-5px] bg-primary"></div>
                             </div>
                         </div>
                         <span className="text-lg font-bold text-foreground tracking-tight">Finny</span>
                     </div>
                     {/* Mobile close button */}
-                    <button onClick={onClose} className="lg:hidden flex h-7 w-7 items-center justify-center rounded-lg hover:bg-muted-bg transition-colors">
+                    <button onClick={onClose} className="lg:hidden flex size-7 items-center justify-center rounded-lg hover:bg-muted-bg transition-colors">
                         <X size={16} className="text-muted-foreground" />
                     </button>
                 </div>

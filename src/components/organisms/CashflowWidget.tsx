@@ -45,11 +45,11 @@ export function CashflowWidget() {
                 </div>
                 <div className="flex items-center gap-3 lg:gap-4">
                     <div className="flex items-center gap-1.5">
-                        <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        <div className="size-2 rounded-full bg-primary"></div>
                         <span className="text-[9px] lg:text-[10px] font-semibold text-muted-foreground">Expense</span>
                     </div>
                     <div className="flex items-center gap-1.5">
-                        <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
+                        <div className="size-2 rounded-full bg-yellow-400"></div>
                         <span className="text-[9px] lg:text-[10px] font-semibold text-muted-foreground">Income</span>
                     </div>
                 </div>

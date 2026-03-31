@@ -25,7 +25,7 @@ export function Avatar({ className, src, alt = "Avatar", size = 'md', fallback, 
             {...props}
         >
             {src ? (
-                <Image src={src} alt={alt} fill className="aspect-square h-full w-full object-cover" />
+                <Image src={src} alt={alt} fill className="aspect-square size-full object-cover" />
             ) : (
                 <span className="font-medium">{fallback || alt.charAt(0)}</span>
             )}
