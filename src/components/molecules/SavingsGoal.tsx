@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { Target } from 'lucide-react';
 
 interface SavingsGoalProps {
     title: string;
@@ -20,7 +21,13 @@ export function SavingsGoal({ title, target, current, colorClass }: SavingsGoalP
 
     return (
         <div className="flex flex-col gap-2 w-full">
-
+            <div className={cn("border-l-[3px] pl-2.5 py-0.5", colorClass.replace('bg-', 'border-'))}>
+                <div className="text-[12px] font-bold">{title}</div>
+                <div className="flex items-center gap-1 text-[10px] text-muted-foreground mt-0.5">
+                    <Target size={10} className="text-muted-foreground/70" />
+                    Target: ${target.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                </div>
+            </div>
 
             <div className="font-semibold text-[12px]">
                 ${current.toLocaleString('en-US', { minimumFractionDigits: 2 })}
