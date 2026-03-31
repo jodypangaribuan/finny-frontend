@@ -16,7 +16,7 @@ export function StatCard({ title, amount, trend, comparisonText, hasDropdown }: 
     const isPositive = trend >= 0;
 
     return (
-        <Card className="p-3 lg:p-4 xl:p-5 w-full flex flex-col justify-between h-full bg-card">
+        <Card className="p-3 lg:p-4 xl:p-5 size-full flex flex-col justify-between bg-card">
             <div className="flex items-center justify-between mb-2 lg:mb-3">
                 <div className="flex items-center gap-1 lg:gap-1.5 text-muted-foreground text-[10px] lg:text-xs font-medium">
                     {title}
@@ -36,7 +36,7 @@ export function StatCard({ title, amount, trend, comparisonText, hasDropdown }: 
                     <IconWrapper icon={isPositive ? TrendingUp : TrendingDown} size={9} />
                     {Math.abs(trend)}%
                 </Badge>
-                <span className="text-muted-foreground text-[8px] lg:text-[10px] whitespace-nowrap overflow-hidden text-ellipsis">{comparisonText}</span>
+                <span className="text-muted-foreground text-[8px] lg:text-[10px] truncate">{comparisonText}</span>
             </div>
         </Card>
     );

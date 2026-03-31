@@ -16,7 +16,7 @@ export function AvatarGroup({ users, max = 4 }: AvatarGroupProps) {
                 <Avatar key={i} src={user.src} fallback={user.fallback} className="ring-2 ring-white" />
             ))}
             {remaining > 0 && (
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-muted-bg text-sm font-medium text-foreground ring-2 ring-white">
+                <div className="flex size-10 items-center justify-center rounded-full bg-muted-bg text-sm font-medium text-foreground ring-2 ring-white">
                     +{remaining}
                 </div>
             )}

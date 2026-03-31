@@ -37,7 +37,7 @@ export function BalanceWidget() {
                 <Button variant="outline" className="flex-1 rounded-lg h-9 lg:h-10 text-[11px] lg:text-xs font-semibold border-border/60 bg-card text-foreground hover:bg-muted-bg gap-1">
                     <IconWrapper icon={ArrowDownLeft} size={13} /> Received
                 </Button>
-                <Button variant="outline" size="icon" className="shrink-0 h-9 w-9 lg:h-10 lg:w-10 rounded-lg border-border/60 bg-card text-foreground hover:bg-muted-bg">
+                <Button variant="outline" size="icon" className="shrink-0 size-9 lg:size-10 rounded-lg border-border/60 bg-card text-foreground hover:bg-muted-bg">
                     <Plus size={14} strokeWidth={2.5} />
                 </Button>
             </div>

@@ -37,7 +37,7 @@ export function ThemeToggle() {
 
             {/* The sliding toggle thumb */}
             <div
-                className={`absolute left-[2px] top-[1.5px] flex h-[19px] w-[19px] items-center justify-center rounded-full bg-white shadow-sm transition-transform duration-500 cubic-bezier(0.34, 1.56, 0.64, 1) dark:bg-muted-foreground ${isDark ? "translate-x-[20px]" : "translate-x-0"
+                className={`absolute left-[2px] top-[1.5px] flex size-[19px] items-center justify-center rounded-full bg-white shadow-sm transition-transform duration-500 cubic-bezier(0.34, 1.56, 0.64, 1) dark:bg-muted-foreground ${isDark ? "translate-x-[20px]" : "translate-x-0"
                     }`}
             >
                 {isDark ? (
