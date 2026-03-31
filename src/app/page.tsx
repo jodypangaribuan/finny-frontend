@@ -8,6 +8,7 @@ import { StatCard } from '@/components/molecules/StatCard';
 import { Button } from '@/components/atoms/Button';
 import { IconWrapper } from '@/components/atoms/IconWrapper';
 import { Calendar, DownloadCloud } from 'lucide-react';
+import { cashflowData, quickTransferUsers, recentTransactions } from '@/data/mock';
 
 /**
  * Renders the main dashboard home page with responsive balance, stats, transfer, cashflow, savings, and recent activity widgets.
@@ -68,12 +69,12 @@ export default function Home() {
         
         {/* Cashflow */}
         <div className="md:col-span-2 lg:col-span-7 order-3 lg:order-4 lg:h-full">
-          <CashflowWidget />
+          <CashflowWidget data={cashflowData} />
         </div>
         
         {/* Quick Transfer */}
         <div className="md:col-span-1 lg:col-span-5 order-4 lg:order-3 lg:h-full">
-          <QuickTransferWidget />
+          <QuickTransferWidget users={quickTransferUsers} />
         </div>
         
         {/* Savings */}
@@ -83,7 +84,7 @@ export default function Home() {
         
         {/* Recent Activity */}
         <div className="md:col-span-2 lg:col-span-5 order-6 lg:order-5 lg:h-full">
-          <RecentActivityWidget />
+          <RecentActivityWidget transactions={recentTransactions} />
         </div>
       </div>
     </DashboardLayout>

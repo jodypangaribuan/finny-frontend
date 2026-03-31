@@ -2,7 +2,11 @@ import { Card } from '../atoms/Card';
 import { WidgetHeader } from '../molecules/WidgetHeader';
 import { TransactionItem } from '../molecules/TransactionItem';
 import { ChevronDown } from 'lucide-react';
-import { recentTransactions as transactions } from '../../data/mock';
+import { Transaction } from '../../types';
+
+interface RecentActivityWidgetProps {
+    transactions?: Transaction[];
+}
 
 /**
  * Renders a recent activity widget showing a list of recent transactions with names, dates, and amounts.
@@ -11,7 +15,7 @@ import { recentTransactions as transactions } from '../../data/mock';
  * <RecentActivityWidget />
  * @returns {JSX.Element} The recent activity widget component.
  */
-export function RecentActivityWidget() {
+export function RecentActivityWidget({ transactions = [] }: RecentActivityWidgetProps) {
     return (
         <Card className="p-4 bg-card flex flex-col h-full">
             <WidgetHeader title="Recently Activity" actionLabel="This Week" />

@@ -3,7 +3,11 @@ import { WidgetHeader } from '../molecules/WidgetHeader';
 import { Button } from '../atoms/Button';
 import { Plus } from 'lucide-react';
 import { Avatar } from '../atoms/Avatar';
-import { quickTransferUsers as users } from '../../data/mock';
+import { User } from '../../types';
+
+interface QuickTransferWidgetProps {
+    users?: User[];
+}
 
 /**
  * Renders a quick transfer widget with a horizontal list of user avatars and a create/add button.
@@ -12,7 +16,7 @@ import { quickTransferUsers as users } from '../../data/mock';
  * <QuickTransferWidget />
  * @returns {JSX.Element} The rendered quick transfer widget component.
  **/
-export function QuickTransferWidget() {
+export function QuickTransferWidget({ users = [] }: QuickTransferWidgetProps) {
     return (
         <Card className="p-4 bg-card">
             <WidgetHeader title="Quick transfer" actionLabel="This Week" />

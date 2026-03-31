@@ -8,7 +8,11 @@ import { WidgetHeader } from '../molecules/WidgetHeader';
 import { Badge } from '../atoms/Badge';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, TooltipProps } from 'recharts';
 
-import { cashflowData as data } from '../../data/mock';
+import { CashflowData } from '../../types';
+
+interface CashflowWidgetProps {
+    data?: CashflowData[];
+}
 
 const CustomTooltip = ({ active, payload }: TooltipProps<number, string> & { payload?: { value: number }[] }) => {
     if (active && payload && payload.length) {
@@ -28,7 +32,7 @@ const CustomTooltip = ({ active, payload }: TooltipProps<number, string> & { pay
  * <Card>...</Card>
  * @returns {JSX.Element} A React element representing the cashflow widget.
  */
-export function CashflowWidget() {
+export function CashflowWidget({ data = [] }: CashflowWidgetProps) {
     const { theme, resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
