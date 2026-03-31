@@ -35,7 +35,7 @@ export function QuickTransferWidget() {
                     <div className="flex flex-col items-center gap-1.5 relative group cursor-pointer">
                         <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] px-2.5 py-0.5 rounded-full font-bold whitespace-nowrap shadow-md transition-opacity">
                             {users[0].name}
-                            <div className="absolute -bottom-[4px] left-1/2 -translate-x-1/2 border-[4px] border-transparent border-t-primary"></div>
+                            <div className="absolute bottom-[-4px] left-1/2 -translate-x-1/2 border-[4px] border-transparent border-t-primary"></div>
                         </div>
                         <Avatar src={users[0].src} size="lg" className="ring-2 ring-primary ring-offset-2 ring-offset-card shrink-0 border-0 shadow-sm" />
                     </div>

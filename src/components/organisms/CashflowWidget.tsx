@@ -77,7 +77,7 @@ export function CashflowWidget() {
                             axisLine={false}
                             tickLine={false}
                             tick={{ fill: '#94A3B8', fontSize: 9, fontWeight: 500 }}
-                            tickFormatter={(value) => `${value >= 1000 ? value / 1000 + 'K' : value}`}
+                            tickFormatter={(value) => value >= 1000 ? `${value / 1000}K` : `${value}`}
                             allowDecimals={false}
                             tickCount={5}
                         />
