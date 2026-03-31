@@ -20,10 +20,7 @@ export function SavingsGoal({ title, target, current, colorClass }: SavingsGoalP
 
     return (
         <div className="flex flex-col gap-2 w-full">
-            <div className={cn("border-l-[3px] pl-2.5 py-0.5", colorClass.replace('bg-', 'border-'))}>
-                <div className="text-[12px] font-bold">{title}</div>
-                <div className="text-[10px] text-muted-foreground">Target: ${target.toLocaleString('en-US', { minimumFractionDigits: 2 })}</div>
-            </div>
+
 
             <div className="font-semibold text-[12px]">
                 ${current.toLocaleString('en-US', { minimumFractionDigits: 2 })}
