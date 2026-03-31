@@ -54,4 +54,7 @@ ENV PORT=3000
 
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
+  CMD wget -qO- http://localhost:${PORT:-3000} > /dev/null || exit 1
+
 CMD ["node", "server.js"]
