@@ -56,47 +56,34 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Mobile & Tablet: Balance & Stats */}
-      <div className="lg:hidden grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 mb-3 md:mb-4">
-        <div className="md:col-span-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-3 md:gap-4 mb-4">
+        {/* Balance */}
+        <div className="md:col-span-2 lg:col-span-5 order-1 h-full">
           <BalanceWidget />
         </div>
-        <div className="grid grid-cols-2 gap-3 md:gap-4 md:col-span-7">
+        {/* Stats */}
+        <div className="grid grid-cols-2 gap-3 md:gap-4 md:col-span-2 lg:col-span-7 order-2">
           {statCards}
         </div>
-      </div>
-
-      {/* Desktop: Original grid layout */}
-      <div className="hidden lg:grid lg:grid-cols-12 gap-4 mb-4">
-        <div className="lg:col-span-5">
-          <BalanceWidget />
-        </div>
-        <div className="lg:col-span-7 grid grid-cols-2 gap-4">
-          {statCards}
-        </div>
-      </div>
-
-      {/* Mobile & Tablet: stacked widgets */}
-      <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-        <div className="md:col-span-2">
+        
+        {/* Cashflow */}
+        <div className="md:col-span-2 lg:col-span-7 order-3 lg:order-4 lg:h-full">
           <CashflowWidget />
         </div>
-        <QuickTransferWidget />
-        <SavingsWidget />
-        <div className="md:col-span-2">
-          <RecentActivityWidget />
-        </div>
-      </div>
-
-      {/* Desktop: 2-column layout */}
-      <div className="hidden lg:grid lg:grid-cols-12 gap-4">
-        <div className="lg:col-span-5 flex flex-col gap-4">
+        
+        {/* Quick Transfer */}
+        <div className="md:col-span-1 lg:col-span-5 order-4 lg:order-3 lg:h-full">
           <QuickTransferWidget />
-          <RecentActivityWidget />
         </div>
-        <div className="lg:col-span-7 flex flex-col gap-4">
-          <CashflowWidget />
+        
+        {/* Savings */}
+        <div className="md:col-span-1 lg:col-span-7 order-5 lg:order-6 lg:h-full">
           <SavingsWidget />
+        </div>
+        
+        {/* Recent Activity */}
+        <div className="md:col-span-2 lg:col-span-5 order-6 lg:order-5 lg:h-full">
+          <RecentActivityWidget />
         </div>
       </div>
     </DashboardLayout>
