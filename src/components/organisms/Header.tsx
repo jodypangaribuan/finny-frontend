@@ -1,6 +1,5 @@
 "use client";
 
-import React from 'react';
 import { IconWrapper } from '../atoms/IconWrapper';
 import { Avatar } from '../atoms/Avatar';
 import { Search, Bell, ChevronDown, Menu } from 'lucide-react';
@@ -25,6 +24,7 @@ export function Header({ onMenuToggle }: HeaderProps) {
             <div className="flex items-center gap-3">
                 {/* Mobile hamburger */}
                 <button
+                    aria-label="Toggle menu"
                     onClick={onMenuToggle}
                     className="flex size-9 items-center justify-center rounded-lg hover:bg-muted-bg transition-colors lg:hidden"
                 >
@@ -46,14 +46,14 @@ export function Header({ onMenuToggle }: HeaderProps) {
             </div>
 
             <div className="flex items-center gap-2 lg:gap-3">
-                <button className="flex size-8 lg:size-9 items-center justify-center rounded-full hover:bg-muted-bg transition-colors">
+                <button aria-label="Search" className="flex size-8 lg:size-9 items-center justify-center rounded-full hover:bg-muted-bg transition-colors">
                     <IconWrapper icon={Search} size={16} className="text-foreground lg:hidden" />
                     <IconWrapper icon={Search} size={18} className="text-foreground hidden lg:block" />
                 </button>
                 <div className="flex items-center lg:hidden mr-1">
                     <ThemeToggle />
                 </div>
-                <button className="flex size-8 lg:size-9 items-center justify-center rounded-full hover:bg-muted-bg transition-colors relative">
+                <button aria-label="Notifications" className="flex size-8 lg:size-9 items-center justify-center rounded-full hover:bg-muted-bg transition-colors relative">
                     <IconWrapper icon={Bell} size={16} className="text-foreground lg:hidden" />
                     <IconWrapper icon={Bell} size={18} className="text-foreground hidden lg:block" />
                     <span className="absolute top-1 lg:top-1.5 right-1.5 lg:right-2 size-2 rounded-full bg-danger border-2 border-white dark:border-card"></span>

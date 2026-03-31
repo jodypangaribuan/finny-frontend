@@ -16,7 +16,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                     "inline-flex items-center justify-center rounded-xl font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50 gap-2",
                     {
                         "bg-primary text-white hover:bg-primary-hover shadow-sm": variant === 'primary',
-                        "border border-border bg-white text-foreground hover:bg-muted-bg": variant === 'outline',
+                        "border border-border bg-card text-foreground hover:bg-muted-bg": variant === 'outline',
                         "hover:bg-muted-bg text-muted-foreground hover:text-foreground": variant === 'ghost',
                         "bg-muted-bg text-foreground hover:bg-border": variant === 'secondary',
 

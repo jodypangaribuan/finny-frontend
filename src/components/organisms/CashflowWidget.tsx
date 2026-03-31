@@ -1,10 +1,12 @@
 "use client";
 
-import React from 'react';
+import { useTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
+
 import { Card } from '../atoms/Card';
 import { WidgetHeader } from '../molecules/WidgetHeader';
 import { Badge } from '../atoms/Badge';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, TooltipProps } from 'recharts';
 
 const data = [
     { name: 'Dec', income: 4500, expense: 12000 },
@@ -19,7 +21,7 @@ const data = [
     { name: 'Sep', income: 5000, expense: 11000 },
 ];
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+const CustomTooltip = ({ active, payload }: TooltipProps<number, string> & { payload?: any[] }) => {
     if (active && payload && payload.length) {
         return (
             <div className="bg-foreground text-card text-[10px] font-bold py-1 px-2.5 rounded-full shadow-lg flex items-center gap-1.5">
@@ -38,6 +40,17 @@ const CustomTooltip = ({ active, payload, label }: any) => {
  * @returns {JSX.Element} A React element representing the cashflow widget.
  */
 export function CashflowWidget() {
+    const { theme, resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const isDark = mounted && (theme === 'dark' || resolvedTheme === 'dark');
+    const gridColor = isDark ? '#334155' : '#E2E8F0';
+    const tickColor = isDark ? '#94A3B8' : '#64748B';
+
     return (
         <Card className="p-4 bg-card h-full flex flex-col">
             <WidgetHeader title="Cashflow" actionLabel="This Month" />
@@ -65,23 +78,23 @@ export function CashflowWidget() {
             <div className="flex-1 w-full min-h-[160px] lg:min-h-[180px]">
                 <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={data} margin={{ top: 10, right: 5, left: -30, bottom: 0 }}>
-                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} stroke={gridColor} />
                         <XAxis
                             dataKey="name"
                             axisLine={false}
                             tickLine={false}
-                            tick={{ fill: '#94A3B8', fontSize: 9, fontWeight: 500 }}
+                            tick={{ fill: tickColor, fontSize: 9, fontWeight: 500 }}
                             dy={8}
                         />
                         <YAxis
                             axisLine={false}
                             tickLine={false}
-                            tick={{ fill: '#94A3B8', fontSize: 9, fontWeight: 500 }}
+                            tick={{ fill: tickColor, fontSize: 9, fontWeight: 500 }}
                             tickFormatter={(value) => (value >= 1000 ? `${value / 1000}K` : `${value}`)}
                             allowDecimals={false}
                             tickCount={5}
                         />
-                        <Tooltip content={<CustomTooltip />} cursor={{ stroke: '#E2E8F0', strokeWidth: 1, strokeDasharray: '3 3' }} />
+                        <Tooltip content={<CustomTooltip />} cursor={{ stroke: gridColor, strokeWidth: 1, strokeDasharray: '3 3' }} />
                         <Line
                             type="monotone"
                             dataKey="expense"

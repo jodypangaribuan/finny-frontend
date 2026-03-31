@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from '@/lib/utils';
 import { IconWrapper } from '../atoms/IconWrapper';
 import { LucideIcon } from 'lucide-react';
@@ -22,6 +21,7 @@ interface MenuItemProps {
 export function MenuItem({ icon, label, isActive, notificationCount, onClick }: MenuItemProps) {
     return (
         <button
+            role="menuitem"
             onClick={onClick}
             className={cn(
                 "flex w-full items-center justify-between rounded-lg px-3 py-2 text-[13px] font-medium transition-colors cursor-pointer",

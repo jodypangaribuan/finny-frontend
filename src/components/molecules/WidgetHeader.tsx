@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '../atoms/Button';
 import { IconWrapper } from '../atoms/IconWrapper';
 import { ChevronDown } from 'lucide-react';

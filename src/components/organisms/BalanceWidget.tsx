@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card } from '../atoms/Card';
 import { Button } from '../atoms/Button';
 import { Badge } from '../atoms/Badge';
@@ -20,7 +19,7 @@ export function BalanceWidget() {
                     My Balance
                     <IconWrapper icon={Info} size={11} className="text-muted-foreground/50" />
                 </div>
-                <button className="flex items-center gap-1 text-[9px] lg:text-[10px] font-medium text-muted-foreground hover:text-foreground transition-colors border border-border/50 rounded-full px-2 lg:px-2.5 py-0.5 bg-card">
+                <button aria-label="Select date" className="flex items-center gap-1 text-[9px] lg:text-[10px] font-medium text-muted-foreground hover:text-foreground transition-colors border border-border/50 rounded-full px-2 lg:px-2.5 py-0.5 bg-card">
                     <IconWrapper icon={ChevronDown} size={9} /> July 16 <IconWrapper icon={ChevronDown} size={9} />
                 </button>
             </div>
@@ -32,7 +31,7 @@ export function BalanceWidget() {
 
             <div className="flex items-center gap-1.5 mb-4 lg:mb-5 mt-0.5">
                 <span className="text-[11px] lg:text-xs font-mono tracking-wider text-muted-foreground">7484 7475 8383 9384</span>
-                <button className="flex items-center gap-1 text-[9px] lg:text-[10px] text-muted-foreground font-medium bg-muted-bg/80 border border-border/40 hover:bg-border/50 px-1.5 lg:px-2 py-0.5 rounded transition-colors ml-1">
+                <button aria-label="Copy account number" className="flex items-center gap-1 text-[9px] lg:text-[10px] text-muted-foreground font-medium bg-muted-bg/80 border border-border/40 hover:bg-border/50 px-1.5 lg:px-2 py-0.5 rounded transition-colors ml-1">
                     <IconWrapper icon={Copy} size={9} /> Copy
                 </button>
             </div>
@@ -44,7 +43,7 @@ export function BalanceWidget() {
                 <Button variant="outline" className="flex-1 rounded-lg h-9 lg:h-10 text-[11px] lg:text-xs font-semibold border-border/60 bg-card text-foreground hover:bg-muted-bg gap-1">
                     <IconWrapper icon={ArrowDownLeft} size={13} /> Received
                 </Button>
-                <Button variant="outline" size="icon" className="shrink-0 size-9 lg:size-10 rounded-lg border-border/60 bg-card text-foreground hover:bg-muted-bg">
+                <Button aria-label="Add funds" variant="outline" size="icon" className="shrink-0 size-9 lg:size-10 rounded-lg border-border/60 bg-card text-foreground hover:bg-muted-bg">
                     <Plus size={14} strokeWidth={2.5} />
                 </Button>
             </div>

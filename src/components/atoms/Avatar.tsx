@@ -21,7 +21,7 @@ export function Avatar({ className, src, alt = "Avatar", size = 'md', fallback, 
     return (
         <div
             className={cn(
-                "relative flex shrink-0 overflow-hidden rounded-full bg-muted-bg text-muted-foreground items-center justify-center border-2 border-white",
+                "relative flex shrink-0 overflow-hidden rounded-full bg-muted-bg text-muted-foreground items-center justify-center border-2 border-card",
                 {
                     "h-8 w-8 text-xs": size === 'sm',
                     "h-10 w-10 text-sm": size === 'md',

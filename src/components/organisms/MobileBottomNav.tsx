@@ -1,10 +1,9 @@
 "use client";
 
-import React from 'react';
 import { IconWrapper } from '../atoms/IconWrapper';
 import {
     LayoutGrid, Wallet, ArrowLeftRight, TrendingUp,
-    BarChart2, MoreHorizontal
+    BarChart2, MoreHorizontal, LucideIcon
 } from 'lucide-react';
 
 /**
@@ -46,7 +45,7 @@ function NavItem({
     label,
     isActive,
 }: {
-    icon: any;
+    icon: LucideIcon;
     label: string;
     isActive?: boolean;
 }) {

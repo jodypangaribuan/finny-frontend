@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card } from '../atoms/Card';
 import { WidgetHeader } from '../molecules/WidgetHeader';
 import { SavingsGoal } from '../molecules/SavingsGoal';
