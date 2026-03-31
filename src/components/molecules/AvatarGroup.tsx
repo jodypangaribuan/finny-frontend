@@ -6,6 +6,15 @@ interface AvatarGroupProps {
     max?: number;
 }
 
+/**
+ * Renders a grouped row of user avatars with an optional overflow count badge.
+ * @example
+ * AvatarGroup({ users, max: 4 })
+ * <div>...</div>
+ * @param {AvatarGroupProps} users - Array of user objects to display as avatars.
+ * @param {number} [max=4] - Maximum number of avatars to show before displaying a remaining count.
+ * @returns {JSX.Element} A flex container containing overlapping avatars and an optional "+remaining" badge.
+ **/
 export function AvatarGroup({ users, max = 4 }: AvatarGroupProps) {
     const displayUsers = users.slice(0, max);
     const remaining = users.length - max;

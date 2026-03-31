@@ -11,6 +11,14 @@ interface MenuItemProps {
     onClick?: () => void;
 }
 
+/**
+ * Renders a clickable menu item with an icon, label, active state styling, and optional notification badge.
+ * @example
+ * MenuItem({ icon: HomeIcon, label: "Dashboard", isActive: true, notificationCount: 3, onClick: handleClick })
+ * <button>...</button>
+ * @param {MenuItemProps} props - The menu item properties including icon, label, active state, notification count, and click handler.
+ * @returns {JSX.Element} A button element representing the menu item.
+ **/
 export function MenuItem({ icon, label, isActive, notificationCount, onClick }: MenuItemProps) {
     return (
         <button

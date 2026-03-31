@@ -9,6 +9,13 @@ import { Button } from '@/components/atoms/Button';
 import { IconWrapper } from '@/components/atoms/IconWrapper';
 import { Calendar, DownloadCloud } from 'lucide-react';
 
+/**
+ * Renders the main dashboard home page with responsive balance, stats, transfer, cashflow, savings, and recent activity widgets.
+ * @example
+ * Home()
+ * <DashboardLayout>...</DashboardLayout>
+ * @returns {JSX.Element} The dashboard home page UI.
+ **/
 export default function Home() {
   return (
     <DashboardLayout>

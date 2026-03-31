@@ -10,6 +10,14 @@ interface HeaderProps {
     onMenuToggle?: () => void;
 }
 
+/**
+* Renders the top navigation header with mobile menu, search, notifications, theme toggle, and user profile controls.
+* @example
+* Header({ onMenuToggle: handleMenuToggle })
+* <header>...</header>
+* @param {{ HeaderProps }} { onMenuToggle } - Callback invoked when the mobile menu button is clicked.
+* @returns {JSX.Element} The header UI element.
+**/
 export function Header({ onMenuToggle }: HeaderProps) {
     return (
         <header className="sticky top-0 z-30 flex h-14 lg:h-16 w-full items-center justify-between bg-card border-b border-border/40 px-4 lg:px-6">

@@ -9,6 +9,14 @@ interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
     fallback?: string;
 }
 
+/**
+ * Renders a circular avatar with an optional image source and fallback content.
+ * @example
+ * Avatar({ className: "custom-avatar", src: "/user.jpg", alt: "Jane Doe", size: "md", fallback: "JD" })
+ * <div className="...">...</div>
+ * @param {AvatarProps} { className, src, alt = "Avatar", size = "md", fallback, ...props } - Avatar configuration and additional div props.
+ * @returns {JSX.Element} A styled avatar element displaying an image when `src` is provided, otherwise a fallback initial.
+ **/
 export function Avatar({ className, src, alt = "Avatar", size = 'md', fallback, ...props }: AvatarProps) {
     return (
         <div

@@ -17,6 +17,14 @@ interface SidebarProps {
     onClose?: () => void;
 }
 
+/**
+* Renders a responsive sidebar navigation with menu items, mobile overlay, and theme toggle controls.
+* @example
+* Sidebar({ isOpen: true, onClose: handleClose })
+* <aside>...</aside>
+* @param {SidebarProps} { isOpen, onClose } - Props controlling sidebar visibility and the close handler.
+* @returns {JSX.Element} The sidebar UI element.
+**/
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);

@@ -12,6 +12,14 @@ interface StatCardProps {
     hasDropdown?: boolean;
 }
 
+/**
+ * Displays a statistic card with a title, amount, trend indicator, and optional dropdown control.
+ * @example
+ * StatCard({ title: 'Revenue', amount: '$12,450', trend: 8, comparisonText: 'vs last month', hasDropdown: true })
+ * <StatCard />
+ * @param {StatCardProps} props - Component props including title, amount, trend, comparison text, and dropdown visibility.
+ * @returns {JSX.Element} A rendered statistic card component.
+ */
 export function StatCard({ title, amount, trend, comparisonText, hasDropdown }: StatCardProps) {
     const isPositive = trend >= 0;
 

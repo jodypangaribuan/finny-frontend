@@ -9,6 +9,14 @@ interface WidgetHeaderProps {
     onAction?: () => void;
 }
 
+/**
+* Renders a widget header with a title and an optional action button.
+* @example
+* WidgetHeader({ title: "Overview", actionLabel: "More", onAction: () => {} })
+* <div>...</div>
+* @param {WidgetHeaderProps} props - Component props containing the title, optional action label, and action handler.
+* @returns {JSX.Element} The rendered widget header element.
+**/
 export function WidgetHeader({ title, actionLabel, onAction }: WidgetHeaderProps) {
     return (
         <div className="flex items-center justify-between mb-3">

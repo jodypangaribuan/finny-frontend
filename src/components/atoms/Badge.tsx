@@ -5,6 +5,14 @@ interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
     variant?: 'success' | 'danger' | 'neutral';
 }
 
+/**
+* Renders a badge element with variant-based styling and custom class support.
+* @example
+* Badge({ className: "my-badge", variant: "success", children: "New" })
+* <div className="...">New</div>
+* @param {BadgeProps} { className, variant = 'neutral', children, ...props } - Props used to configure the badge appearance and content.
+* @returns {JSX.Element} A styled badge container element.
+**/
 export function Badge({ className, variant = 'neutral', children, ...props }: BadgeProps) {
     return (
         <div

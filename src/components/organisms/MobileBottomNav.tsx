@@ -7,6 +7,13 @@ import {
     BarChart2, MoreHorizontal
 } from 'lucide-react';
 
+/**
+ * Renders a fixed mobile-only bottom navigation bar with multiple navigation items.
+ * @example
+ * MobileBottomNav()
+ * <nav>...</nav>
+ * @returns {JSX.Element} The mobile bottom navigation component.
+**/
 export function MobileBottomNav() {
     return (
         <nav className="fixed bottom-0 left-0 right-0 z-50 lg:hidden">
@@ -24,6 +31,16 @@ export function MobileBottomNav() {
     );
 }
 
+/**
+ * Renders a single navigation item button for the mobile bottom navigation.
+ * @example
+ * NavItem({ icon, label, isActive })
+ * <button>...</button>
+ * @param {any} icon - Icon element to display inside the navigation item.
+ * @param {string} label - Text label shown below the icon.
+ * @param {boolean} [isActive] - Whether the navigation item is currently active.
+ * @returns {JSX.Element} A button element representing a mobile navigation item.
+ */
 function NavItem({
     icon,
     label,

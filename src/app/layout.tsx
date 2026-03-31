@@ -19,6 +19,14 @@ export const metadata: Metadata = {
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
 
+/**
+ * Defines the root HTML layout for the application and wraps all pages with the theme provider.
+ * @example
+ * RootLayout({ children })
+ * <html><body>...app content...</body></html>
+ * @param {{ children: React.ReactNode }} children - The React node(s) to render within the application layout.
+ * @returns {JSX.Element} The root layout structure containing the HTML, body, and wrapped child content.
+ **/
 export default function RootLayout({
   children,
 }: Readonly<{
