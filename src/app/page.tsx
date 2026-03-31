@@ -17,6 +17,25 @@ import { Calendar, DownloadCloud } from 'lucide-react';
  * @returns {JSX.Element} The dashboard home page UI.
  **/
 export default function Home() {
+  const statCards = (
+    <>
+      <StatCard
+        title="Monthly Spent"
+        amount="$45,623.48"
+        trend={16.5}
+        comparisonText="Compared to last month"
+        hasDropdown
+      />
+      <StatCard
+        title="Monthly Income"
+        amount="$84,884.80"
+        trend={-12.8}
+        comparisonText="Compared to last month"
+        hasDropdown
+      />
+    </>
+  );
+
   return (
     <DashboardLayout>
       {/* Top action row */}
@@ -43,20 +62,7 @@ export default function Home() {
           <BalanceWidget />
         </div>
         <div className="grid grid-cols-2 gap-3 md:gap-4 md:col-span-7">
-          <StatCard
-            title="Monthly Spent"
-            amount="$45,623.48"
-            trend={16.5}
-            comparisonText="Compared to last month"
-            hasDropdown
-          />
-          <StatCard
-            title="Monthly Income"
-            amount="$84,884.80"
-            trend={-12.8}
-            comparisonText="Compared to last month"
-            hasDropdown
-          />
+          {statCards}
         </div>
       </div>
 
@@ -66,20 +72,7 @@ export default function Home() {
           <BalanceWidget />
         </div>
         <div className="lg:col-span-7 grid grid-cols-2 gap-4">
-          <StatCard
-            title="Monthly Spent"
-            amount="$45,623.48"
-            trend={16.5}
-            comparisonText="Compared to last month"
-            hasDropdown
-          />
-          <StatCard
-            title="Monthly Income"
-            amount="$84,884.80"
-            trend={-12.8}
-            comparisonText="Compared to last month"
-            hasDropdown
-          />
+          {statCards}
         </div>
       </div>
 
