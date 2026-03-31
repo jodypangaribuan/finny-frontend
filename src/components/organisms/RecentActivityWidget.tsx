@@ -33,8 +33,8 @@ export function RecentActivityWidget() {
             </div>
 
             <div className="flex flex-col flex-1">
-                {transactions.map((t, i) => (
-                    <div key={i} className="border-b border-border/30 last:border-0">
+                {transactions.map((t) => (
+                    <div key={t.name + t.date} className="border-b border-border/30 last:border-0">
                         <TransactionItem
                             name={t.name}
                             cardNumber={t.cardNumber}

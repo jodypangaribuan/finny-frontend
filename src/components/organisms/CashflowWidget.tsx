@@ -21,7 +21,7 @@ const data = [
     { name: 'Sep', income: 5000, expense: 11000 },
 ];
 
-const CustomTooltip = ({ active, payload }: TooltipProps<number, string> & { payload?: any[] }) => {
+const CustomTooltip = ({ active, payload }: TooltipProps<number, string> & { payload?: { value: number }[] }) => {
     if (active && payload && payload.length) {
         return (
             <div className="bg-foreground text-card text-[10px] font-bold py-1 px-2.5 rounded-full shadow-lg flex items-center gap-1.5">
@@ -44,6 +44,7 @@ export function CashflowWidget() {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
     }, []);
 

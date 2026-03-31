@@ -26,7 +26,7 @@ interface SidebarProps {
 * @returns {JSX.Element} The sidebar UI element.
 **/
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
-    const { theme, setTheme } = useTheme();
+    const { theme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     // Prevent hydration mismatch

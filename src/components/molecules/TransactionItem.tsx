@@ -5,8 +5,6 @@ interface TransactionItemProps {
     date: string;
     amount: number;
     cardNumber: string;
-    avatarSrc?: string;
-    avatarFallback?: string;
     iconBgColor?: string;
     iconText?: string;
 }
@@ -33,8 +31,6 @@ export function TransactionItem({
     date,
     amount,
     cardNumber,
-    avatarSrc,
-    avatarFallback,
     iconBgColor,
     iconText
 }: TransactionItemProps) {
