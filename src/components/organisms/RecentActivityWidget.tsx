@@ -4,6 +4,13 @@ import { WidgetHeader } from '../molecules/WidgetHeader';
 import { TransactionItem } from '../molecules/TransactionItem';
 import { ChevronDown } from 'lucide-react';
 
+/**
+ * Renders a recent activity widget showing a list of recent transactions with names, dates, and amounts.
+ * @example
+ * RecentActivityWidget()
+ * <RecentActivityWidget />
+ * @returns {JSX.Element} The recent activity widget component.
+ */
 export function RecentActivityWidget() {
     const transactions = [
         { name: 'PayPal', cardNumber: '****9484', date: '16 Jul 2024', amount: 848.84, iconBgColor: 'bg-[#003087]', iconText: 'P' },

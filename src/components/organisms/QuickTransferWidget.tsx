@@ -5,6 +5,13 @@ import { Button } from '../atoms/Button';
 import { Plus } from 'lucide-react';
 import { Avatar } from '../atoms/Avatar';
 
+/**
+ * Renders a quick transfer widget with a horizontal list of user avatars and a create/add button.
+ * @example
+ * QuickTransferWidget()
+ * <QuickTransferWidget />
+ * @returns {JSX.Element} The rendered quick transfer widget component.
+ **/
 export function QuickTransferWidget() {
     const users = [
         { src: 'https://i.pravatar.cc/150?u=1', fallback: 'RF', id: '1', name: 'Robert Fox' },

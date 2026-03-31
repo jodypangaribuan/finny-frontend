@@ -8,6 +8,14 @@ interface SavingsGoalProps {
     colorClass: string;
 }
 
+/**
+ * Renders a savings goal summary with target, current amount, and completion progress.
+ * @example
+ * SavingsGoal({ title: 'Vacation Fund', target: 5000, current: 1250, colorClass: 'bg-blue-500' })
+ * // Returns a savings goal progress card UI
+ * @param {SavingsGoalProps} { title, target, current, colorClass } - Savings goal data including the title, target amount, current amount, and progress bar color class.
+ * @returns {JSX.Element} A JSX element displaying the savings goal details and progress percentage.
+ */
 export function SavingsGoal({ title, target, current, colorClass }: SavingsGoalProps) {
     const percentage = Math.min(Math.round((current / target) * 100), 100);
 

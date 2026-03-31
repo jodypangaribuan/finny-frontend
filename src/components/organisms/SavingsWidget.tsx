@@ -4,6 +4,13 @@ import { WidgetHeader } from '../molecules/WidgetHeader';
 import { SavingsGoal } from '../molecules/SavingsGoal';
 import { Badge } from '../atoms/Badge';
 
+/**
+ * Renders a savings summary widget with current balance, weekly performance, and savings goals.
+ * @example
+ * SavingsWidget()
+ * <Card>...</Card>
+ * @returns {JSX.Element} The rendered savings widget UI.
+ */
 export function SavingsWidget() {
     return (
         <Card className="p-4 bg-card h-full flex flex-col justify-between">

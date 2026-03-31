@@ -12,6 +12,23 @@ interface TransactionItemProps {
     iconText?: string;
 }
 
+/**
+ * Renders a transaction list item showing the merchant name, date, card number, and formatted amount.
+ * @example
+ * TransactionItem({
+ *   name: "Coffee Shop",
+ *   date: "2026-03-31",
+ *   amount: -12.5,
+ *   cardNumber: "**** 4242",
+ *   avatarSrc: "/avatar.png",
+ *   avatarFallback: "CS",
+ *   iconBgColor: "bg-blue-500",
+ *   iconText: "C"
+ * })
+ * null
+ * @param {TransactionItemProps} props - Transaction details and display customization options.
+ * @returns {JSX.Element} The rendered transaction item row.
+ **/
 export function TransactionItem({
     name,
     date,

@@ -30,6 +30,13 @@ const CustomTooltip = ({ active, payload, label }: any) => {
     return null;
 };
 
+/**
+ * Renders a cashflow dashboard widget showing total balance, month-over-month change, and a line chart comparing expense and income trends.
+ * @example
+ * CashflowWidget()
+ * <Card>...</Card>
+ * @returns {JSX.Element} A React element representing the cashflow widget.
+ */
 export function CashflowWidget() {
     return (
         <Card className="p-4 bg-card h-full flex flex-col">

@@ -5,6 +5,14 @@ import { Sidebar } from '../organisms/Sidebar';
 import { Header } from '../organisms/Header';
 import { MobileBottomNav } from '../organisms/MobileBottomNav';
 
+/**
+ * Renders the main dashboard shell with a collapsible sidebar, header, content area, and mobile bottom navigation.
+ * @example
+ * DashboardLayout({ children: <div>Dashboard content</div> })
+ * <div>Dashboard content</div>
+ * @param {React.ReactNode} children - The content to display inside the dashboard main area.
+ * @returns {JSX.Element} The dashboard layout component.
+ **/
 export function DashboardLayout({ children }: { children: React.ReactNode }) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 

@@ -5,6 +5,13 @@ import { Badge } from '../atoms/Badge';
 import { IconWrapper } from '../atoms/IconWrapper';
 import { Info, ChevronDown, Copy, ArrowUpRight, ArrowDownLeft, Plus } from 'lucide-react';
 
+/**
+ * Displays a balance summary card with account info, current balance, change indicator, and action buttons.
+ * @example
+ * BalanceWidget()
+ * <Card>...</Card>
+ * @returns {JSX.Element} A balance widget UI component.
+ **/
 export function BalanceWidget() {
     return (
         <Card className="p-4 lg:p-5 relative bg-card flex flex-col justify-between h-full">
